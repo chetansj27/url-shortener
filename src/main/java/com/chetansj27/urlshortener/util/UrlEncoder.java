@@ -10,13 +10,13 @@ public class UrlEncoder {
     }
 
     public static String encodedBase62() {
-        StringBuilder str = new StringBuilder();
+        StringBuilder shortUrl = new StringBuilder();
         long uniqueId = System.currentTimeMillis();
         while (uniqueId > 0) {
-            str.insert(0, ALPHABET.charAt((int) (uniqueId % BASE)));
+            shortUrl.insert(0, ALPHABET.charAt((int) (uniqueId % BASE)));
             uniqueId = uniqueId / BASE;
         }
-        return str.toString();
+        return shortUrl.toString();
     }
 
 
