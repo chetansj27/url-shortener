@@ -1,0 +1,21 @@
+spring:
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+  data:
+    mongodb:
+      #uri: mongodb://root:password@localhost:27017/?authSource=admin
+      host: localhost
+      port: 27017
+      username: name
+      password: pass
+      database: urls
+      authentication-database: admin
+      auto-index-creation: true
+    redis:
+      host: localhost
+      port: 6379
+  cache:
+    type: redis
+redis:
+  ttl: 2
